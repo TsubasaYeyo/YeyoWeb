@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3 - IFRAME</title>
+    <style>
+        table {
+            width: 75%;
+            margin: auto;
+            text-align: center;
+        }
+        img {
+            width: 100px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 80%;
+            height: 400px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function mostrarImagen(src) {
+            document.getElementById('iframeDisplay').src = src;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">El Sistema Solar</h1>
+    </header>
+    
+    <table>
+        <tr>
+            <td><img src="mercurio.jpg" alt="Mercurio" onclick="mostrarImagen('mercurio.jpg')"></td>
+            <td><img src="venus.jpg" alt="Venus" onclick="mostrarImagen('venus.jpg')"></td>
+            <td><img src="tierra.jpg" alt="Tierra" onclick="mostrarImagen('tierra.jpg')"></td>
+            <td><img src="marte.jpg" alt="Marte" onclick="mostrarImagen('marte.jpg')"></td>
+        </tr>
+        <tr>
+            <td><img src="jupiter.jpg" alt="Júpiter" onclick="mostrarImagen('jupiter.jpg')"></td>
+            <td><img src="saturno.jpg" alt="Saturno" onclick="mostrarImagen('saturno.jpg')"></td>
+            <td><img src="urano.jpg" alt="Urano" onclick="mostrarImagen('urano.jpg')"></td>
+            <td><img src="neptuno.jpg" alt="Neptuno" onclick="mostrarImagen('neptuno.jpg')"></td>
+        </tr>
+    </table>
+    
+    <iframe id="iframeDisplay" src=""></iframe>
+</body>
+</html>
